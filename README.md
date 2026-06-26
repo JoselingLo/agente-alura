@@ -44,3 +44,9 @@ agente-alura/
 
 ```bash
 pip install pandas langchain langchain-openai openai
+## ☁️ Deploy en Render
+
+Este proyecto fue desplegado en Render como una API pública.
+
+🔗 Link:
+https://agente-alura.onrender.com
