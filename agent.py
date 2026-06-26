@@ -1,15 +1,18 @@
 def responder_pregunta(df, pregunta):
-    datos = df.to_string(index=False)
 
-    return f"""
-🤖 (Modo demo sin IA real)
+    pregunta = pregunta.lower()
 
-Recibí tu pregunta:
-"{pregunta}"
+    # 🔥 PRODUCTO MÁS VENDIDO
+    if "más vendido" in pregunta or "mas vendido" in pregunta:
+        resultado = df.groupby("producto")["ventas"].sum().idxmax()
+        total = df.groupby("producto")["ventas"].sum().max()
 
-Datos disponibles:
-{datos}
+        return f"El producto más vendido es {resultado} con {total} unidades."
 
-👉 Respuesta simulada:
-El sistema encontró información en el dataset y procesó la consulta correctamente.
-"""
+    # 🔥 VENTAS POR PRODUCTO
+    for producto in df["producto"].unique():
+        if producto.lower() in pregunta:
+            total = df[df["producto"] == producto]["ventas"].sum()
+            return f"El producto {producto} vendió un total de {total} unidades."
+
+    return "No encontré una respuesta en los datos."
