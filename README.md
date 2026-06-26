@@ -50,3 +50,17 @@ Este proyecto fue desplegado en Render como una API pública.
 
 🔗 Link:
 https://agente-alura.onrender.com
+## 🌐 Deploy en la nube
+
+La aplicación fue desplegada correctamente en Render y está disponible públicamente.
+
+🔗 URL del proyecto:
+https://agente-alura.onrender.com
+
+## 🚀 Cómo probar el agente
+
+Puedes hacer consultas directamente desde el navegador, por ejemplo:
+
+https://agente-alura.onrender.com/preguntar?q=¿Cuál fue el producto más vendido?
+
+El sistema responderá usando los datos del archivo CSV.
